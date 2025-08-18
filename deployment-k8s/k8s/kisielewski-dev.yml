@@ -1,16 +1,19 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  namespace: kisielewski-dev
+  namespace: kisielew-ski
   name: nginx-ingress
+  annotations:
+    kubernetes.io/ingress.class: traefik
+    cert-manager.io/cluster-issuer: letsencrypt-prod
 spec:
-  ingressClassName: nginx
+#  ingressClassName: traefik
   tls:
     - hosts:
-      - kisielewski.dev
-      secretName: kisielewski-dev-cert
+      - kisielew.ski
+      secretName: kisielew-ski-cert
   rules:
-  - host: kisielewski.dev
+  - host: kisielew.ski
     http:
       paths:
       - path: /
@@ -24,7 +27,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  namespace: kisielewski-dev
+  namespace: kisielew-ski
   name: nginx-service
   labels:
     run: nginx
@@ -38,7 +41,7 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  namespace: kisielewski-dev
+  namespace: kisielew-ski
   name: nginx-deployment
 spec:
   selector:
@@ -54,6 +57,6 @@ spec:
       - name: dockerhub
       containers:
       - name: nginx
-        image: wiktorkisielewski/kisielewski-dev:0.4
+        image: wiktorkisielewski/kisielew-ski:0.4
         ports:
         - containerPort: 80
