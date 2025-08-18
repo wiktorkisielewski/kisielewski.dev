@@ -57,6 +57,6 @@ spec:
       - name: dockerhub
       containers:
       - name: nginx
-        image: wiktorkisielewski/kisielew-ski:0.4
+        image: wiktorkisielewski/kisielew-ski:0.5
         ports:
         - containerPort: 80
