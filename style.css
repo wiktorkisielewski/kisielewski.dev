@@ -1,9 +1,94 @@
-body {
-    background-color: black;
-    color: #eeeeee;
-    font-family: Arial, Helvetica, sans-serif;
+/* Import a nice monospace font */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-p {
-    text-align: center;
+body {
+  font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', 'Monaco', monospace;
+  background: linear-gradient(135deg, #1e1e2e 0%, #2d2d44 100%);
+  color: #cdd6f4;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  text-align: center;
+  padding: 2rem;
+  background: rgba(30, 30, 46, 0.8);
+  border-radius: 12px;
+  border: 1px solid rgba(205, 214, 244, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  max-width: 500px;
+  width: 90%;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #89b4fa;
+  text-shadow: 0 0 20px rgba(137, 180, 250, 0.3);
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: #a6adc8;
+  margin-bottom: 2rem;
+  font-weight: 300;
+}
+
+.contact {
+  margin-top: 2rem;
+}
+
+.contact p {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+a {
+  color: #f5c2e7;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border-bottom: 1px solid transparent;
+}
+
+a:hover {
+  color: #f5c2e7;
+  border-bottom-color: #f5c2e7;
+  text-shadow: 0 0 10px rgba(245, 194, 231, 0.5);
+}
+
+/* Add a subtle glow effect on hover */
+.container:hover {
+  border-color: rgba(137, 180, 250, 0.3);
+  box-shadow: 0 12px 40px rgba(137, 180, 250, 0.1);
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+  .container {
+    padding: 1.5rem;
+    margin: 1rem;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+  
+  .subtitle {
+    font-size: 1rem;
+  }
+  
+  .contact p {
+    font-size: 1.1rem;
+  }
 }
