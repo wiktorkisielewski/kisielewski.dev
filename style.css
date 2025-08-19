@@ -31,11 +31,11 @@ body {
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 600;
   margin-bottom: 1rem;
-  color: #89b4fa;
-  text-shadow: 0 0 20px rgba(137, 180, 250, 0.3);
+  color: #cdd6f4;
+  text-align: center;
 }
 
 .subtitle {
@@ -55,16 +55,16 @@ h1 {
 }
 
 a {
-  color: #f5c2e7;
+  color: #a6adc8;
   text-decoration: none;
   transition: all 0.3s ease;
   border-bottom: 1px solid transparent;
 }
 
 a:hover {
-  color: #f5c2e7;
-  border-bottom-color: #f5c2e7;
-  text-shadow: 0 0 10px rgba(245, 194, 231, 0.5);
+  color: #cdd6f4;
+  border-bottom-color: #cdd6f4;
+  text-shadow: 0 0 10px rgba(205, 214, 244, 0.3);
 }
 
 /* Add a subtle glow effect on hover */
@@ -81,7 +81,7 @@ a:hover {
   }
   
   h1 {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
   
   .subtitle {
